@@ -10,6 +10,11 @@ import UIKit
 
 class BHRLabel: UILabel {
 
-    //
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.font = UIFont(name: labelFont, size: labelFontSize)
+    }
 
 }

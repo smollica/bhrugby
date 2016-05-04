@@ -1,5 +1,5 @@
 //
-//  BHRCollectionView.swift
+//  BHRNavigationItem.swift
 //  BHRugby
 //
 //  Created by Sergio Mollica on 2016-05-04.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BHRCollectionView: UICollectionView {
-
+class BHRNavigationItem: UINavigationItem {
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.tintColor = UIColor.myColour2()
+        self.backBarButtonItem?.tintColor = UIColor.myColour2()
     }
-    
+
 }

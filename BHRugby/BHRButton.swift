@@ -10,6 +10,20 @@ import UIKit
 
 class BHRButton: UIButton {
 
-    //
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.backgroundColor = UIColor.myColour1()
+        self.tintColor = UIColor.myColour2()
+        self.layer.borderColor = UIColor.myColour4().CGColor
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowColor = UIColor.myColour3().CGColor
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowOpacity = shadowOpacity
+        self.titleLabel!.font = UIFont(name: buttonFont, size: buttonFontSize)
+        self.titleLabel!.adjustsFontSizeToFitWidth = true
+    }
 
 }

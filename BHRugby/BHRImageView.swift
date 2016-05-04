@@ -10,6 +10,17 @@ import UIKit
 
 class BHRImageView: UIImageView {
 
-    //
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.tintColor = UIColor.myColour2()
+        self.layer.borderColor = UIColor.myColour4().CGColor
+        self.layer.borderWidth = borderWidth / 2
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowColor = UIColor.myColour3().CGColor
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowOpacity = shadowOpacity
+    }
 
 }

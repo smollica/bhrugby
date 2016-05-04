@@ -10,6 +10,11 @@ import UIKit
 
 class BHRTableView: UITableView {
 
-    //
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.tintColor = UIColor.myColour2()
+        self.separatorColor = UIColor.myColour4()
+    }
     
 }

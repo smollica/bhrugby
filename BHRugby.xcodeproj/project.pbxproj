@@ -20,7 +20,6 @@
 		71071F2A1CDA4BE2005CF121 /* FichaDeTreinoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F291CDA4BE2005CF121 /* FichaDeTreinoViewController.swift */; };
 		71071F2C1CDA4C01005CF121 /* PresecaDeTreinoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F2B1CDA4C01005CF121 /* PresecaDeTreinoViewController.swift */; };
 		71071F2E1CDA4C26005CF121 /* FichaDeAtletaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F2D1CDA4C26005CF121 /* FichaDeAtletaViewController.swift */; };
-		71071F301CDA4C50005CF121 /* EditorDeAtletaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F2F1CDA4C50005CF121 /* EditorDeAtletaViewController.swift */; };
 		71071F321CDA4C78005CF121 /* EstatisticasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F311CDA4C78005CF121 /* EstatisticasViewController.swift */; };
 		71071F361CDA4D32005CF121 /* BHRTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F351CDA4D32005CF121 /* BHRTextField.swift */; };
 		71071F381CDA4D50005CF121 /* BHRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F371CDA4D50005CF121 /* BHRButton.swift */; };
@@ -37,6 +36,11 @@
 		71071F4E1CDA5241005CF121 /* Jogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F4D1CDA5241005CF121 /* Jogo.swift */; };
 		71071F501CDA525B005CF121 /* Treino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F4F1CDA525B005CF121 /* Treino.swift */; };
 		71071F521CDA528F005CF121 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F511CDA528F005CF121 /* ColourExtension.swift */; };
+		71071F541CDA6553005CF121 /* AtletaStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F531CDA6553005CF121 /* AtletaStats.swift */; };
+		71071F561CDA66B1005CF121 /* JogoStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F551CDA66B1005CF121 /* JogoStats.swift */; };
+		71071F581CDA6CFF005CF121 /* BHRNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */; };
+		71071F5A1CDA6D62005CF121 /* BHRNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */; };
+		71071F5E1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F5D1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift */; };
 		9C67DFD061E17577A616D364 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A025948FE8D8A0FEAFDF42B9 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +61,6 @@
 		71071F291CDA4BE2005CF121 /* FichaDeTreinoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaDeTreinoViewController.swift; sourceTree = "<group>"; };
 		71071F2B1CDA4C01005CF121 /* PresecaDeTreinoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresecaDeTreinoViewController.swift; sourceTree = "<group>"; };
 		71071F2D1CDA4C26005CF121 /* FichaDeAtletaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FichaDeAtletaViewController.swift; sourceTree = "<group>"; };
-		71071F2F1CDA4C50005CF121 /* EditorDeAtletaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorDeAtletaViewController.swift; sourceTree = "<group>"; };
 		71071F311CDA4C78005CF121 /* EstatisticasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstatisticasViewController.swift; sourceTree = "<group>"; };
 		71071F351CDA4D32005CF121 /* BHRTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRTextField.swift; sourceTree = "<group>"; };
 		71071F371CDA4D50005CF121 /* BHRButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRButton.swift; sourceTree = "<group>"; };
@@ -74,6 +77,11 @@
 		71071F4D1CDA5241005CF121 /* Jogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogo.swift; sourceTree = "<group>"; };
 		71071F4F1CDA525B005CF121 /* Treino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treino.swift; sourceTree = "<group>"; };
 		71071F511CDA528F005CF121 /* ColourExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
+		71071F531CDA6553005CF121 /* AtletaStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtletaStats.swift; sourceTree = "<group>"; };
+		71071F551CDA66B1005CF121 /* JogoStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JogoStats.swift; sourceTree = "<group>"; };
+		71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRNavigationItem.swift; sourceTree = "<group>"; };
+		71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRNavigationViewController.swift; sourceTree = "<group>"; };
+		71071F5D1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstatisticasDoTimeViewController.swift; sourceTree = "<group>"; };
 		75754D9E276EAF32E3D6AA47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A025948FE8D8A0FEAFDF42B9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				71071F4B1CDA51FF005CF121 /* Atleta.swift */,
+				71071F531CDA6553005CF121 /* AtletaStats.swift */,
 				71071F4D1CDA5241005CF121 /* Jogo.swift */,
+				71071F551CDA66B1005CF121 /* JogoStats.swift */,
 				71071F4F1CDA525B005CF121 /* Treino.swift */,
 			);
 			name = Model;
@@ -168,8 +178,8 @@
 				71071F2B1CDA4C01005CF121 /* PresecaDeTreinoViewController.swift */,
 				71071F211CDA4B51005CF121 /* AtletasViewController.swift */,
 				71071F2D1CDA4C26005CF121 /* FichaDeAtletaViewController.swift */,
-				71071F2F1CDA4C50005CF121 /* EditorDeAtletaViewController.swift */,
 				71071F311CDA4C78005CF121 /* EstatisticasViewController.swift */,
+				71071F5D1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,6 +217,8 @@
 				71071F451CDA4E71005CF121 /* BHRCollectionView.swift */,
 				71071F491CDA4EFB005CF121 /* AtletasCollectionViewCell.swift */,
 				71071F471CDA4EB9005CF121 /* PresencaCollectionViewCell.swift */,
+				71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */,
+				71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -334,11 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				71071F2A1CDA4BE2005CF121 /* FichaDeTreinoViewController.swift in Sources */,
+				71071F561CDA66B1005CF121 /* JogoStats.swift in Sources */,
 				71071F071CDA479F005CF121 /* AppDelegate.swift in Sources */,
+				71071F5E1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift in Sources */,
 				71071F201CDA4B38005CF121 /* TreinosViewController.swift in Sources */,
 				71071F441CDA4E36005CF121 /* BHRImageView.swift in Sources */,
 				71071F281CDA4BBA005CF121 /* AnotacoesDeJogoViewController.swift in Sources */,
-				71071F301CDA4C50005CF121 /* EditorDeAtletaViewController.swift in Sources */,
+				71071F581CDA6CFF005CF121 /* BHRNavigationItem.swift in Sources */,
 				71071F501CDA525B005CF121 /* Treino.swift in Sources */,
 				71071F241CDA4B76005CF121 /* FichaDeJogoViewController.swift in Sources */,
 				71071F3A1CDA4D74005CF121 /* BHRTableView.swift in Sources */,
@@ -350,6 +364,7 @@
 				71071F381CDA4D50005CF121 /* BHRButton.swift in Sources */,
 				71071F361CDA4D32005CF121 /* BHRTextField.swift in Sources */,
 				71071F1E1CDA4B12005CF121 /* JogosViewController.swift in Sources */,
+				71071F5A1CDA6D62005CF121 /* BHRNavigationViewController.swift in Sources */,
 				71071F4A1CDA4EFB005CF121 /* AtletasCollectionViewCell.swift in Sources */,
 				71071F2C1CDA4C01005CF121 /* PresecaDeTreinoViewController.swift in Sources */,
 				71071F521CDA528F005CF121 /* ColourExtension.swift in Sources */,
@@ -359,6 +374,7 @@
 				71071F4E1CDA5241005CF121 /* Jogo.swift in Sources */,
 				71071F3E1CDA4DDA005CF121 /* TreinosTableViewCell.swift in Sources */,
 				71071F481CDA4EB9005CF121 /* PresencaCollectionViewCell.swift in Sources */,
+				71071F541CDA6553005CF121 /* AtletaStats.swift in Sources */,
 				71071F461CDA4E71005CF121 /* BHRCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

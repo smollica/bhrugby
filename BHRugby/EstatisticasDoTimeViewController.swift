@@ -1,5 +1,5 @@
 //
-//  EditorDeAtletaViewController.swift
+//  EstatisticasDoTimeViewController.swift
 //  BHRugby
 //
 //  Created by Sergio Mollica on 2016-05-04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditorDeAtletaViewController: UIViewController {
+class EstatisticasDoTimeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

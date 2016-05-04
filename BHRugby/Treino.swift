@@ -9,8 +9,18 @@
 import UIKit
 import Parse
 
-class Treino: PFObject {
+class Treino: PFObject, PFSubclassing {
     
-    //
+    // MARK: Properties
+    
+    @NSManaged var image: PFFile
+    @NSManaged var date: NSDate
+    @NSManaged var atletas: [Atleta]
+    
+    // MARK: Parse
+    
+    static func parseClassName() -> String {
+        return "Treino"
+    }
 
 }

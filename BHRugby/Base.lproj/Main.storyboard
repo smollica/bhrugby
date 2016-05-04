@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N9o-xy-eJf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Jogos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JogosViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,18 +17,397 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-Sn-KQ6">
-                                <rect key="frame" x="20" y="20" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-Sn-KQ6" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="20" y="74" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-6A-QPu" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jogoCell" id="zKT-cf-cvW" customClass="JogosTableViewCell" customModule="BHRugby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKT-cf-cvW" id="Lb6-Og-fLC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-Dh-8Of" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="254" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9tb-AT-gN3">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="rGu-Vf-baf">
+                            <connections>
+                                <segue destination="Icq-xa-EDS" kind="showDetail" identifier="addJogo" id="qyp-PE-GNu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="hML-Ex-zzb" kind="showDetail" identifier="jogoDetail" id="pwU-9H-sYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1187" y="349"/>
+        </scene>
+        <!--Ficha De Jogo View Controller-->
+        <scene sceneID="yyn-Rf-T3c">
+            <objects>
+                <viewController id="hML-Ex-zzb" customClass="FichaDeJogoViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pXk-9F-SbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="D6P-fA-zmv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4hj-5x-IxL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQv-9D-Qx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="349"/>
+        </scene>
+        <!--Atletas View Controller-->
+        <scene sceneID="oxE-Fg-H4R">
+            <objects>
+                <viewController id="eZf-4V-hNU" customClass="AtletasViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lkn-xQ-jfD"/>
+                        <viewControllerLayoutGuide type="bottom" id="KFq-Tr-XfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qbW-Ye-p2s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrN-o9-f1m" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="20" y="74" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDa-Et-ut7" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="254" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-gU-OSy" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="atletaCell" id="gw6-FS-rX1" customClass="AtletasTableViewCell" customModule="BHRugby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gw6-FS-rX1" id="IVo-4f-Yra">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a8o-Fj-lVN">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="0kP-qp-zLd" customClass="bhilai">
+                            <connections>
+                                <segue destination="8Oi-U9-Pe9" kind="showDetail" identifier="addAtleta" id="yqG-Kq-CHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="8Oi-U9-Pe9" kind="showDetail" identifier="atletaDetail" id="5l7-1v-ERo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qh-4e-6mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="1775"/>
+        </scene>
+        <!--Treinos View Controller-->
+        <scene sceneID="eFb-aD-1Cq">
+            <objects>
+                <viewController id="5I1-lR-F0N" customClass="TreinosViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6px-Xn-Snf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fes-Cq-kCU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D9t-Ak-alO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96B-It-38c" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="20" y="74" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-li-XlR" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="254" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lXU-mb-GE9" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="treinoCell" id="ymv-kI-kxc" customClass="TreinosTableViewCell" customModule="BHRugby" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ymv-kI-kxc" id="5YP-vw-Ks3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XC8-ei-K3c">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="dCX-qm-1JI">
+                            <connections>
+                                <segue destination="ie6-Op-Afz" kind="showDetail" identifier="addTreino" id="ZQO-h1-w2V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="v6q-vQ-D5m" kind="showDetail" identifier="treinoDetails" id="fQJ-Gv-k4a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4G-kg-2Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="2462"/>
+        </scene>
+        <!--Ficha De Treino View Controller-->
+        <scene sceneID="XJE-IY-RCj">
+            <objects>
+                <viewController id="v6q-vQ-D5m" customClass="FichaDeTreinoViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qKI-yu-7p0"/>
+                        <viewControllerLayoutGuide type="bottom" id="NEO-bD-Rr5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hzc-QW-ty3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COc-Ka-qTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="2462"/>
+        </scene>
+        <!--STATS-->
+        <scene sceneID="Dff-s0-0rK">
+            <objects>
+                <viewController id="NNw-sF-TgR" customClass="EstatisticasDoTimeViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fPH-Uk-lTl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADW-T5-c62"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9sz-D6-TRW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="STATS" id="A8o-0Z-Pxg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ob7-LE-Bvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="3145"/>
+        </scene>
+        <!--Preseca De Treino View Controller-->
+        <scene sceneID="4pQ-yV-k85">
+            <objects>
+                <viewController id="ie6-Op-Afz" customClass="PresecaDeTreinoViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A9c-3j-zbU"/>
+                        <viewControllerLayoutGuide type="bottom" id="3VH-nn-yeQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="td5-dL-xRF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRR-T8-G57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="3203"/>
+        </scene>
+        <!--Ficha De Atleta View Controller-->
+        <scene sceneID="jMi-ba-EK5">
+            <objects>
+                <viewController id="8Oi-U9-Pe9" customClass="FichaDeAtletaViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xLS-0h-FNq"/>
+                        <viewControllerLayoutGuide type="bottom" id="slK-PF-cRb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XfF-K6-OXT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="qO4-ny-4XE" kind="showDetail" identifier="atletaStats" id="daT-tt-NRi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xka-mq-L0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="1775"/>
+        </scene>
+        <!--Estatisticas View Controller-->
+        <scene sceneID="7wE-bX-I8u">
+            <objects>
+                <viewController id="qO4-ny-4XE" customClass="EstatisticasViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ybz-VU-2Vt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2EK-hA-Y2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lfr-d5-WEp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XeJ-9R-pA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="1775"/>
+        </scene>
+        <!--Escalacao View Controller-->
+        <scene sceneID="Bz6-II-ZOG">
+            <objects>
+                <viewController id="Icq-xa-EDS" customClass="EscalacaoViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aQF-It-kyd"/>
+                        <viewControllerLayoutGuide type="bottom" id="6hv-X3-Dsd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UlQ-ln-MXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="fMJ-LX-z17" kind="show" identifier="startJogo" id="xtP-f5-gaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuX-YC-vsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="1095"/>
+        </scene>
+        <!--Anotacoes De Jogo View Controller-->
+        <scene sceneID="YFq-uY-UHd">
+            <objects>
+                <viewController id="fMJ-LX-z17" customClass="AnotacoesDeJogoViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9a5-RZ-L8A"/>
+                        <viewControllerLayoutGuide type="bottom" id="R8R-Sp-xKA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ohn-iq-ym6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRh-NF-Qm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="1095"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="o4L-ZI-gQW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N9o-xy-eJf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nqQ-Nt-pyR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nvb-Tg-TQr" kind="relationship" relationship="viewControllers" id="v6c-2t-GV0"/>
+                        <segue destination="TSr-rs-zDC" kind="relationship" relationship="viewControllers" id="Gnr-2S-bPW"/>
+                        <segue destination="BMI-FF-o5B" kind="relationship" relationship="viewControllers" id="QDm-ir-aUu"/>
+                        <segue destination="NNw-sF-TgR" kind="relationship" relationship="viewControllers" id="kDc-0n-Evx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="riH-fk-iEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="349"/>
+        </scene>
+        <!--JOGOS-->
+        <scene sceneID="B8q-KT-Skk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nvb-Tg-TQr" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="JOGOS" id="er6-C2-NgK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1n-q2-BaA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k6w-ga-TVC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H71-he-vbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="349"/>
+        </scene>
+        <!--ATLETAS-->
+        <scene sceneID="Jfr-VA-kGT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSr-rs-zDC" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ATLETAS" id="kxa-WY-quZ"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p2o-rh-5cI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eZf-4V-hNU" kind="relationship" relationship="rootViewController" id="7WC-h4-9SA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XH-Y8-l1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="1775"/>
+        </scene>
+        <!--TREINOS-->
+        <scene sceneID="WRV-tW-U07">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BMI-FF-o5B" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TREINOS" id="VDY-q9-bxi"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOt-qG-G2F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5I1-lR-F0N" kind="relationship" relationship="rootViewController" id="3Gd-WH-ZbD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qy-dK-PYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="2462"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5l7-1v-ERo"/>
+    </inferredMetricsTieBreakers>
 </document>
