@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Jogos View Controller-->
@@ -17,13 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-Sn-KQ6" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="20" y="74" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-Sn-KQ6" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="25" y="89" width="120" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="kNa-AY-euc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-6A-QPu" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-6A-QPu" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="jogoCell" id="zKT-cf-cvW" customClass="JogosTableViewCell" customModule="BHRugby" customModuleProvider="target">
@@ -36,23 +41,58 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-Dh-8Of" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="254" y="74" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-Dh-8Of" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="270" y="89" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KOh-Dh-8Of" secondAttribute="height" multiplier="1:1" id="yWi-i7-goC"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="Icq-xa-EDS" kind="show" identifier="newJogo" id="pWD-bX-ikK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YB-XX-w0d" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="170" y="89" width="75" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4YB-XX-w0d" secondAttribute="height" multiplier="3:1" id="62P-zu-2Yx"/>
+                                </constraints>
+                                <state key="normal" title="Filtrar"/>
+                                <connections>
+                                    <action selector="conductSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g97-lK-zqa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CUh-Sn-KQ6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="1zI-p2-uyz"/>
+                            <constraint firstItem="4YB-XX-w0d" firstAttribute="centerY" secondItem="CUh-Sn-KQ6" secondAttribute="centerY" id="24r-b8-Dpr"/>
+                            <constraint firstItem="KOh-Dh-8Of" firstAttribute="leading" secondItem="4YB-XX-w0d" secondAttribute="trailing" constant="25" id="3r1-rj-bi4"/>
+                            <constraint firstItem="LxR-6A-QPu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="479-pF-lZg"/>
+                            <constraint firstItem="CUh-Sn-KQ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="5go-K2-1nS"/>
+                            <constraint firstItem="KOh-Dh-8Of" firstAttribute="centerY" secondItem="CUh-Sn-KQ6" secondAttribute="centerY" id="68r-z1-lCE"/>
+                            <constraint firstAttribute="bottom" secondItem="LxR-6A-QPu" secondAttribute="bottom" id="6K9-tQ-wMb"/>
+                            <constraint firstItem="CUh-Sn-KQ6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="8BM-JV-rXD"/>
+                            <constraint firstItem="KOh-Dh-8Of" firstAttribute="height" secondItem="CUh-Sn-KQ6" secondAttribute="height" id="9Oc-3P-v7b"/>
+                            <constraint firstItem="4YB-XX-w0d" firstAttribute="height" secondItem="CUh-Sn-KQ6" secondAttribute="height" id="AQZ-wy-dIj"/>
+                            <constraint firstItem="LxR-6A-QPu" firstAttribute="top" secondItem="CUh-Sn-KQ6" secondAttribute="bottom" constant="25" id="OQC-um-BXC"/>
+                            <constraint firstAttribute="trailing" secondItem="KOh-Dh-8Of" secondAttribute="trailing" constant="25" id="Y1I-fb-zD6"/>
+                            <constraint firstItem="4YB-XX-w0d" firstAttribute="leading" secondItem="CUh-Sn-KQ6" secondAttribute="trailing" constant="25" id="cwe-fO-oN9"/>
+                            <constraint firstAttribute="trailing" secondItem="LxR-6A-QPu" secondAttribute="trailing" id="wcE-Wk-dk2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8BM-JV-rXD"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="9tb-AT-gN3">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="rGu-Vf-baf">
-                            <connections>
-                                <segue destination="Icq-xa-EDS" kind="showDetail" identifier="addJogo" id="qyp-PE-GNu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="9tb-AT-gN3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="hML-Ex-zzb" kind="showDetail" identifier="jogoDetail" id="pwU-9H-sYT"/>
+                        <outlet property="newJogoButton" destination="KOh-Dh-8Of" id="WrK-te-oeO"/>
+                        <outlet property="searchButton" destination="4YB-XX-w0d" id="Z9T-xi-n8r"/>
+                        <outlet property="searchTextField" destination="CUh-Sn-KQ6" id="LPa-Kh-C9C"/>
+                        <outlet property="tableView" destination="LxR-6A-QPu" id="MYp-AW-VTP"/>
+                        <segue destination="hML-Ex-zzb" kind="show" identifier="jogoDetails" id="n5H-Ok-ecx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,6 +138,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDa-Et-ut7" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="254" y="74" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="8Oi-U9-Pe9" kind="show" identifier="atletaDetails" id="ayj-Ln-qop"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-gU-OSy" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="127" width="320" height="441"/>
@@ -113,20 +156,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl9-hX-HbV" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="194" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a8o-Fj-lVN">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="0kP-qp-zLd" customClass="bhilai">
-                            <connections>
-                                <segue destination="8Oi-U9-Pe9" kind="showDetail" identifier="addAtleta" id="yqG-Kq-CHS"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="a8o-Fj-lVN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <segue destination="8Oi-U9-Pe9" kind="showDetail" identifier="atletaDetail" id="5l7-1v-ERo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qh-4e-6mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +190,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-li-XlR" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="254" y="74" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ie6-Op-Afz" kind="show" identifier="newTreino" id="Frp-qt-lrt"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lXU-mb-GE9" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="127" width="320" height="441"/>
@@ -167,19 +208,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwC-W5-tje" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="200" y="74" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XC8-ei-K3c">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="dCX-qm-1JI">
-                            <connections>
-                                <segue destination="ie6-Op-Afz" kind="showDetail" identifier="addTreino" id="ZQO-h1-w2V"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="XC8-ei-K3c"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="v6q-vQ-D5m" kind="showDetail" identifier="treinoDetails" id="fQJ-Gv-k4a"/>
+                        <segue destination="v6q-vQ-D5m" kind="show" identifier="treinoDetails" id="lWa-3Y-k1T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4G-kg-2Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,12 +257,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="STATS" id="A8o-0Z-Pxg"/>
+                    <tabBarItem key="tabBarItem" title="STATS" image="stats" id="A8o-0Z-Pxg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ob7-LE-Bvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805" y="3145"/>
+            <point key="canvasLocation" x="805" y="3208"/>
         </scene>
         <!--Preseca De Treino View Controller-->
         <scene sceneID="4pQ-yV-k85">
@@ -242,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRR-T8-G57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="3203"/>
+            <point key="canvasLocation" x="1580" y="3208"/>
         </scene>
         <!--Ficha De Atleta View Controller-->
         <scene sceneID="jMi-ba-EK5">
@@ -259,7 +298,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="qO4-ny-4XE" kind="showDetail" identifier="atletaStats" id="daT-tt-NRi"/>
+                        <segue destination="qO4-ny-4XE" kind="show" identifier="statsDetails" id="Cxd-ud-4s7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xka-mq-L0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,12 +339,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="fMJ-LX-z17" kind="show" identifier="startJogo" id="xtP-f5-gaK"/>
+                        <segue destination="fMJ-LX-z17" kind="show" identifier="startJogo" id="z0P-Xp-a4z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuX-YC-vsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="1095"/>
+            <point key="canvasLocation" x="1590" y="1095"/>
         </scene>
         <!--Anotacoes De Jogo View Controller-->
         <scene sceneID="YFq-uY-UHd">
@@ -329,7 +368,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o4L-ZI-gQW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N9o-xy-eJf" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="N9o-xy-eJf" customClass="BHRTabBarController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nqQ-Nt-pyR">
@@ -351,7 +390,7 @@
         <scene sceneID="B8q-KT-Skk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nvb-Tg-TQr" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="JOGOS" id="er6-C2-NgK"/>
+                    <tabBarItem key="tabBarItem" title="JOGOS" image="game" id="er6-C2-NgK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1n-q2-BaA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -370,7 +409,7 @@
         <scene sceneID="Jfr-VA-kGT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSr-rs-zDC" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ATLETAS" id="kxa-WY-quZ"/>
+                    <tabBarItem key="tabBarItem" title="ATLETAS" image="player" id="kxa-WY-quZ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p2o-rh-5cI">
@@ -390,7 +429,7 @@
         <scene sceneID="WRV-tW-U07">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BMI-FF-o5B" customClass="BHRNavigationViewController" customModule="BHRugby" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TREINOS" id="VDY-q9-bxi"/>
+                    <tabBarItem key="tabBarItem" title="TREINOS" image="treino" id="VDY-q9-bxi"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOt-qG-G2F">
@@ -407,7 +446,10 @@
             <point key="canvasLocation" x="805" y="2462"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5l7-1v-ERo"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="game" width="25" height="25"/>
+        <image name="player" width="25" height="25"/>
+        <image name="stats" width="25" height="25"/>
+        <image name="treino" width="25" height="25"/>
+    </resources>
 </document>

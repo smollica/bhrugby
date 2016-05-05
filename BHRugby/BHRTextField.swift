@@ -21,6 +21,8 @@ let buttonFont = "ArialRoundedMTBold"
 let labelFont = "Copperplate"
 let boldLabelFont = "Copperplate-Bold"
 
+let textFieldHeight: CGFloat = 25
+
 class BHRTextField: UITextField {
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +37,7 @@ class BHRTextField: UITextField {
         self.layer.shadowColor = UIColor.myColour3().CGColor
         self.layer.shadowOffset = CGSize(width: shadowOffset.width / 2, height: shadowOffset.height / 2)
         self.layer.shadowOpacity = shadowOpacity / 2
-        self.font = UIFont(name: labelFont, size: labelFontSize * 0.67)
+//        self.font = UIFont(name: labelFont, size: labelFontSize * 0.67)
     }
 
 

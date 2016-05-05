@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +16,59 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sa8-nb-NOd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-og-bRU">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s6k-og-bRU" secondAttribute="height" multiplier="10:1.25" id="OWb-eK-cvI"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bhr" translatesAutoresizingMaskIntoConstraints="NO" id="bJv-Eb-T5w">
+                                        <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bJv-Eb-T5w" secondAttribute="height" multiplier="1:1" id="K0L-rL-Ubf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bJv-Eb-T5w" firstAttribute="leading" secondItem="sa8-nb-NOd" secondAttribute="leading" constant="40" id="FCv-UP-HQZ"/>
+                                    <constraint firstItem="s6k-og-bRU" firstAttribute="leading" secondItem="sa8-nb-NOd" secondAttribute="leading" id="eH0-UZ-UQ8"/>
+                                    <constraint firstItem="s6k-og-bRU" firstAttribute="centerY" secondItem="sa8-nb-NOd" secondAttribute="centerY" id="hem-ZD-rW0"/>
+                                    <constraint firstAttribute="trailing" secondItem="s6k-og-bRU" secondAttribute="trailing" id="rFr-r0-RZZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bJv-Eb-T5w" secondAttribute="trailing" constant="40" id="udY-5b-iDq"/>
+                                    <constraint firstItem="bJv-Eb-T5w" firstAttribute="centerY" secondItem="sa8-nb-NOd" secondAttribute="centerY" id="xME-3a-rTD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sa8-nb-NOd" secondAttribute="trailing" id="4id-ot-hls"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s6k-og-bRU" secondAttribute="trailing" constant="14" id="91o-NJ-NBC"/>
+                            <constraint firstItem="sa8-nb-NOd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="adN-4H-xOA"/>
+                            <constraint firstItem="sa8-nb-NOd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="pfR-1C-UOl"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="sa8-nb-NOd" secondAttribute="bottom" id="qY9-eN-nMR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="91o-NJ-NBC"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bhr" width="200" height="175"/>
+    </resources>
 </document>

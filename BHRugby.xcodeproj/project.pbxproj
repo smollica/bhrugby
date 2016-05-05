@@ -41,6 +41,8 @@
 		71071F581CDA6CFF005CF121 /* BHRNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */; };
 		71071F5A1CDA6D62005CF121 /* BHRNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */; };
 		71071F5E1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71071F5D1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift */; };
+		71B2D5031CDBC4EA00A01A0D /* BHRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2D5021CDBC4EA00A01A0D /* BHRTabBarController.swift */; };
+		71B2D5051CDBC58B00A01A0D /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2D5041CDBC58B00A01A0D /* ImageExtension.swift */; };
 		9C67DFD061E17577A616D364 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A025948FE8D8A0FEAFDF42B9 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRNavigationItem.swift; sourceTree = "<group>"; };
 		71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRNavigationViewController.swift; sourceTree = "<group>"; };
 		71071F5D1CDA710D005CF121 /* EstatisticasDoTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstatisticasDoTimeViewController.swift; sourceTree = "<group>"; };
+		71B2D5021CDBC4EA00A01A0D /* BHRTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHRTabBarController.swift; sourceTree = "<group>"; };
+		71B2D5041CDBC58B00A01A0D /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		75754D9E276EAF32E3D6AA47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A025948FE8D8A0FEAFDF42B9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				71071F511CDA528F005CF121 /* ColourExtension.swift */,
+				71B2D5041CDBC58B00A01A0D /* ImageExtension.swift */,
 				71071F341CDA4D0F005CF121 /* CustomUI */,
 			);
 			name = View;
@@ -219,6 +224,7 @@
 				71071F471CDA4EB9005CF121 /* PresencaCollectionViewCell.swift */,
 				71071F591CDA6D62005CF121 /* BHRNavigationViewController.swift */,
 				71071F571CDA6CFF005CF121 /* BHRNavigationItem.swift */,
+				71B2D5021CDBC4EA00A01A0D /* BHRTabBarController.swift */,
 			);
 			name = CustomUI;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B2D5031CDBC4EA00A01A0D /* BHRTabBarController.swift in Sources */,
 				71071F2A1CDA4BE2005CF121 /* FichaDeTreinoViewController.swift in Sources */,
 				71071F561CDA66B1005CF121 /* JogoStats.swift in Sources */,
 				71071F071CDA479F005CF121 /* AppDelegate.swift in Sources */,
@@ -375,6 +382,7 @@
 				71071F3E1CDA4DDA005CF121 /* TreinosTableViewCell.swift in Sources */,
 				71071F481CDA4EB9005CF121 /* PresencaCollectionViewCell.swift in Sources */,
 				71071F541CDA6553005CF121 /* AtletaStats.swift in Sources */,
+				71B2D5051CDBC58B00A01A0D /* ImageExtension.swift in Sources */,
 				71071F461CDA4E71005CF121 /* BHRCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
