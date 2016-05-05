@@ -26,6 +26,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d9b-hJ-fvw"/>
+                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-6A-QPu" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="139" width="320" height="429"/>
@@ -40,6 +43,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sxU-zE-Q8k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fLa-d3-MXF"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOh-Dh-8Of" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
                                 <rect key="frame" x="270" y="89" width="25" height="25"/>
@@ -130,41 +137,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrN-o9-f1m" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="20" y="74" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jy7-0i-jdt" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="25" y="89" width="120" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DkD-kL-hYE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDa-Et-ut7" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="254" y="74" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="8Oi-U9-Pe9" kind="show" identifier="atletaDetails" id="ayj-Ln-qop"/>
+                                    <outlet property="delegate" destination="eZf-4V-hNU" id="Uo1-Vc-von"/>
                                 </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-gU-OSy" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pNk-NF-Oee" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="atletaCell" id="gw6-FS-rX1" customClass="AtletasTableViewCell" customModule="BHRugby" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="atletaCell" id="q0a-Aa-lp6" customClass="AtletasTableViewCell" customModule="BHRugby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gw6-FS-rX1" id="IVo-4f-Yra">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0a-Aa-lp6" id="BSX-pF-pxd">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eZf-4V-hNU" id="2Vj-zz-wrO"/>
+                                    <outlet property="delegate" destination="eZf-4V-hNU" id="YXj-C7-sZc"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl9-hX-HbV" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="194" y="74" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqO-uD-oNl" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="270" y="89" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KqO-uD-oNl" secondAttribute="height" multiplier="1:1" id="duR-Vf-d2T"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACV-Ru-0T4" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="170" y="89" width="75" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ACV-Ru-0T4" secondAttribute="height" multiplier="3:1" id="vaJ-RV-98u"/>
+                                </constraints>
+                                <state key="normal" title="Filtrar"/>
+                                <connections>
+                                    <action selector="conductSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DrS-pZ-RKZ"/>
+                                    <action selector="conductSearch:" destination="eZf-4V-hNU" eventType="touchUpInside" id="f0u-Cq-LCe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KqO-uD-oNl" firstAttribute="leading" secondItem="ACV-Ru-0T4" secondAttribute="trailing" constant="25" id="01e-EM-VWe"/>
+                            <constraint firstItem="KqO-uD-oNl" firstAttribute="height" secondItem="Jy7-0i-jdt" secondAttribute="height" id="1Ms-Nz-SvL"/>
+                            <constraint firstAttribute="trailing" secondItem="KqO-uD-oNl" secondAttribute="trailing" constant="25" id="DXe-XW-SIF"/>
+                            <constraint firstItem="ACV-Ru-0T4" firstAttribute="centerY" secondItem="Jy7-0i-jdt" secondAttribute="centerY" id="F29-hA-xFw"/>
+                            <constraint firstItem="KqO-uD-oNl" firstAttribute="centerY" secondItem="Jy7-0i-jdt" secondAttribute="centerY" id="LPo-Kn-7dR"/>
+                            <constraint firstItem="pNk-NF-Oee" firstAttribute="leading" secondItem="qbW-Ye-p2s" secondAttribute="leading" id="Lko-WU-5Kv"/>
+                            <constraint firstAttribute="bottom" secondItem="pNk-NF-Oee" secondAttribute="bottom" id="Q8z-AI-bPz"/>
+                            <constraint firstItem="Jy7-0i-jdt" firstAttribute="leading" secondItem="qbW-Ye-p2s" secondAttribute="leading" constant="25" id="bEA-MU-6KD"/>
+                            <constraint firstItem="Jy7-0i-jdt" firstAttribute="top" secondItem="Lkn-xQ-jfD" secondAttribute="bottom" constant="25" id="dvH-4t-huk"/>
+                            <constraint firstItem="ACV-Ru-0T4" firstAttribute="width" secondItem="ACV-Ru-0T4" secondAttribute="height" multiplier="3:1" id="gGN-RX-med"/>
+                            <constraint firstAttribute="trailing" secondItem="pNk-NF-Oee" secondAttribute="trailing" id="oPB-bT-aN1"/>
+                            <constraint firstItem="ACV-Ru-0T4" firstAttribute="height" secondItem="Jy7-0i-jdt" secondAttribute="height" id="rHE-Kp-V11"/>
+                            <constraint firstItem="KqO-uD-oNl" firstAttribute="width" secondItem="KqO-uD-oNl" secondAttribute="height" multiplier="1:1" id="rg0-3m-z5v"/>
+                            <constraint firstItem="pNk-NF-Oee" firstAttribute="top" secondItem="Jy7-0i-jdt" secondAttribute="bottom" constant="25" id="ujd-Mp-RJL"/>
+                            <constraint firstItem="ACV-Ru-0T4" firstAttribute="leading" secondItem="Jy7-0i-jdt" secondAttribute="trailing" constant="25" id="xMp-We-RL4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a8o-Fj-lVN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="newAtletaButton" destination="KqO-uD-oNl" id="KB1-lK-ZV2"/>
+                        <outlet property="searchButton" destination="ACV-Ru-0T4" id="L7y-vg-Asd"/>
+                        <outlet property="searchTextField" destination="Jy7-0i-jdt" id="2hF-GL-Fnk"/>
+                        <outlet property="tableView" destination="pNk-NF-Oee" id="Pmm-Hr-Vku"/>
+                        <segue destination="8Oi-U9-Pe9" kind="show" identifier="atletaDetails" id="Ml5-Qm-qfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qh-4e-6mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,42 +230,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96B-It-38c" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="20" y="74" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2w0-8i-zzO" customClass="BHRTextField" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="25" y="89" width="120" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="uvz-RD-t33"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-li-XlR" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="254" y="74" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="ie6-Op-Afz" kind="show" identifier="newTreino" id="Frp-qt-lrt"/>
+                                    <outlet property="delegate" destination="5I1-lR-F0N" id="ak5-0m-NEo"/>
                                 </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lXU-mb-GE9" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GE2-de-IOq" customClass="BHRTableView" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="treinoCell" id="ymv-kI-kxc" customClass="TreinosTableViewCell" customModule="BHRugby" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="treinoCell" id="2AX-F3-ng2" customClass="TreinosTableViewCell" customModule="BHRugby" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ymv-kI-kxc" id="5YP-vw-Ks3">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2AX-F3-ng2" id="moC-db-wiK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5I1-lR-F0N" id="U1y-xQ-Zgn"/>
+                                    <outlet property="delegate" destination="5I1-lR-F0N" id="h9D-oU-sXH"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwC-W5-tje" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
-                                <rect key="frame" x="200" y="74" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xg-wZ-Hif" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="270" y="89" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Xg-wZ-Hif" secondAttribute="height" multiplier="1:1" id="qjD-Lg-AMD"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="ie6-Op-Afz" kind="show" identifier="newTreino" id="h45-o9-IEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-oc-d3p" customClass="BHRButton" customModule="BHRugby" customModuleProvider="target">
+                                <rect key="frame" x="170" y="89" width="75" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X7h-oc-d3p" secondAttribute="height" multiplier="3:1" id="cOT-y0-BK2"/>
+                                </constraints>
+                                <state key="normal" title="Filtrar"/>
+                                <connections>
+                                    <action selector="conductSearch:" destination="5I1-lR-F0N" eventType="touchUpInside" id="bh7-hP-RiD"/>
+                                    <action selector="conductSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ld7-L4-NnM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X7h-oc-d3p" firstAttribute="centerY" secondItem="2w0-8i-zzO" secondAttribute="centerY" id="18Z-Px-kKM"/>
+                            <constraint firstItem="X7h-oc-d3p" firstAttribute="leading" secondItem="2w0-8i-zzO" secondAttribute="trailing" constant="25" id="9Hi-Vm-xDm"/>
+                            <constraint firstItem="9Xg-wZ-Hif" firstAttribute="leading" secondItem="X7h-oc-d3p" secondAttribute="trailing" constant="25" id="CX7-Wm-Ecc"/>
+                            <constraint firstAttribute="trailing" secondItem="GE2-de-IOq" secondAttribute="trailing" id="SFp-vo-Nra"/>
+                            <constraint firstItem="GE2-de-IOq" firstAttribute="top" secondItem="2w0-8i-zzO" secondAttribute="bottom" constant="25" id="a2s-KC-VkL"/>
+                            <constraint firstItem="2w0-8i-zzO" firstAttribute="top" secondItem="6px-Xn-Snf" secondAttribute="bottom" constant="25" id="aEn-Ts-5TV"/>
+                            <constraint firstAttribute="trailing" secondItem="9Xg-wZ-Hif" secondAttribute="trailing" constant="25" id="dMq-lW-dby"/>
+                            <constraint firstAttribute="bottom" secondItem="GE2-de-IOq" secondAttribute="bottom" id="daR-E6-sDc"/>
+                            <constraint firstItem="9Xg-wZ-Hif" firstAttribute="width" secondItem="9Xg-wZ-Hif" secondAttribute="height" multiplier="1:1" id="gVX-tL-TJi"/>
+                            <constraint firstItem="9Xg-wZ-Hif" firstAttribute="height" secondItem="2w0-8i-zzO" secondAttribute="height" id="h7r-Xl-gNF"/>
+                            <constraint firstItem="X7h-oc-d3p" firstAttribute="width" secondItem="X7h-oc-d3p" secondAttribute="height" multiplier="3:1" id="hzp-j9-v52"/>
+                            <constraint firstItem="9Xg-wZ-Hif" firstAttribute="centerY" secondItem="2w0-8i-zzO" secondAttribute="centerY" id="pyw-0x-xbh"/>
+                            <constraint firstItem="2w0-8i-zzO" firstAttribute="leading" secondItem="D9t-Ak-alO" secondAttribute="leading" constant="25" id="wQ8-4F-MF7"/>
+                            <constraint firstItem="GE2-de-IOq" firstAttribute="leading" secondItem="D9t-Ak-alO" secondAttribute="leading" id="xyb-wT-eXG"/>
+                            <constraint firstItem="X7h-oc-d3p" firstAttribute="height" secondItem="2w0-8i-zzO" secondAttribute="height" id="yEd-vf-uS7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XC8-ei-K3c"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="newTreinoButton" destination="hzp-j9-v52" id="Vcp-U9-fRK"/>
+                        <outlet property="searchButton" destination="X7h-oc-d3p" id="Elv-bo-Bs4"/>
+                        <outlet property="searchTextField" destination="18Z-Px-kKM" id="6Sw-Yi-ZJG"/>
+                        <outlet property="tableView" destination="GE2-de-IOq" id="6g9-D6-fDR"/>
                         <segue destination="v6q-vQ-D5m" kind="show" identifier="treinoDetails" id="lWa-3Y-k1T"/>
                     </connections>
                 </viewController>

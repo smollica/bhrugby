@@ -9,11 +9,21 @@
 import UIKit
 
 class EstatisticasDoTimeViewController: UIViewController {
+    
+    // MARK: Outlets
+    
+    
+    // MARK: Properties
+    
+    
+    // MARK: viewDidLoad/Appear
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 
     }
+    
+    // MARK: Actions
 
 }

@@ -31,7 +31,7 @@ class BHRTextField: UITextField {
         
         self.backgroundColor = UIColor.myColour5()
         self.tintColor = UIColor.myColour2()
-        self.layer.borderColor = UIColor.myColour4().CGColor
+        self.layer.borderColor = UIColor.myColour1().CGColor
         self.layer.borderWidth = borderWidth / 2
         self.layer.cornerRadius = cornerRadius / 2
         self.layer.shadowColor = UIColor.myColour3().CGColor

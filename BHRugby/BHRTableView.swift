@@ -14,7 +14,7 @@ class BHRTableView: UITableView {
         super.init(coder: aDecoder)
         
         self.tintColor = UIColor.myColour2()
-        self.separatorColor = UIColor.myColour4()
+        self.separatorColor = UIColor.myColour1()
     }
     
 }

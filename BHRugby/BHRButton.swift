@@ -14,9 +14,9 @@ class BHRButton: UIButton {
         super.init(coder: aDecoder)
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        self.backgroundColor = UIColor.myColour1()
+        self.backgroundColor = UIColor.myColour4()
         self.tintColor = UIColor.myColour2()
-        self.layer.borderColor = UIColor.myColour4().CGColor
+        self.layer.borderColor = UIColor.myColour1().CGColor
         self.layer.borderWidth = borderWidth
         self.layer.cornerRadius = cornerRadius
         self.layer.shadowColor = UIColor.myColour3().CGColor

@@ -9,11 +9,25 @@
 import UIKit
 
 class FichaDeAtletaViewController: UIViewController {
+    
+    // MARK: Outlets
+    
+    
+    // MARK: Properties
+    
+    
+    // MARK: viewDidLoad/Appear
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController!.setNavigationBarHidden(false, animated: true)
+    }
+    
+    // MARK: Actions
 
 }

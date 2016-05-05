@@ -15,7 +15,7 @@ class BHRImageView: UIImageView {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         self.tintColor = UIColor.myColour2()
-        self.layer.borderColor = UIColor.myColour4().CGColor
+        self.layer.borderColor = UIColor.myColour1().CGColor
         self.layer.borderWidth = borderWidth / 2
         self.layer.cornerRadius = cornerRadius
         self.layer.shadowColor = UIColor.myColour3().CGColor
